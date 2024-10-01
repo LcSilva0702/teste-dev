@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste-js</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="red-div" onclick="hideThis(event)">
+        
+    </div>
+    <div class="blue-div hidden" onclick="hideThis(event)">
+        
+    </div>
+
+    <script>
+        function hideThis(event) {
+            const elemento = event.target
+                
+            elemento.classList.add("hidden")
+
+            const elementoSeguinte = elemento.classList.contains("red-div") ? ".blue-div" : ".red-div"
+                
+            document.querySelector(elementoSeguinte).classList.remove("hidden")
+        }
+    </script>
+</body>
+</html>
